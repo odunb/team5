@@ -1,0 +1,48 @@
+.overAllContainer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    column-gap: 3em;
+    margin-left: 10em;
+    margin-top: 5em;
+}
+
+.container {
+    width: 20%;
+    height: 25em;
+    margin-top: 2em;
+    display: flex;
+    flex-direction: row;
+    box-shadow: 1px 2px 3px 4px rgba(20,20,20,0.4);
+    border-radius: 10px;
+}
+
+.container:last-child{
+    margin-bottom: 5em;
+}
+
+
+.lowerContainer {
+    margin-top: 9em;
+}
+
+.lowerContainer button {
+    background-color: #806BE4;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    margin-left: 4.5em;
+    margin-top: 1em;
+    border-radius: 5px
+;
+}
+
+.containerTitle {
+    color: black;
+}
+
