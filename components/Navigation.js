@@ -7,7 +7,6 @@ export default function Navigation() {
             <h1 className={styles.title}>ToDo5</h1>
             <div className={styles.navbar}>
                 <Link href="/"><a>Home</a></Link>
-                <Link href="/createToDo"><a>Create</a></Link>
                 <Link href="/aboutUs"><a>About</a></Link>
             </div>
         </div>
