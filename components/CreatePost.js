@@ -1,10 +1,9 @@
-import React from "react";
-import styles from "./Modal.module.css"
+import styles from "./CreatePost.module.css";
 import {useState} from "react";
+import {toast} from "react-toastify";
 
 
-function Modal({ closeModal }) {
-
+export default function CreatePost() {
     const [data, setData] = useState({
         title: "",
         date: "",
@@ -14,9 +13,7 @@ function Modal({ closeModal }) {
         const newData = {...data}
         newData[e.target.id] = e.target.value
         setData(newData)
-        console.log(newData)
     }
-
 
     async function handlePost() {
         const resp = await fetch("https://cosmosteam5.azurewebsites.net/api/HttpTriggerinput?code=Cs6O8yOaGDJW7qNom4vsjlBVLskKBGtRlE8oQIaweiJYAzFuwuX3Hg==", {
@@ -31,28 +28,27 @@ function Modal({ closeModal }) {
             })
         })
         console.log(resp)
+        toast.info("Add Task")
+
     }
 
     return(
-        <div className={styles.modalBackground}>
-            <div className={styles.modalContainer}>
-                <button onClick={() => closeModal(false)}>X</button>
-                <form>
-                    <h1>Create youre <span className={styles.textSpan}>todo</span></h1>
+        <div>
+            <div className={styles.contactForm}>
+                <form onSubmit={handlePost}>
+                    <h1>Add new <span className={styles.textSpan}>task</span></h1>
                     <div className={styles.inputBox}>
+                        <label>Title</label>
                         <input onChange={(e)=>handle(e)} id="title" value={data.title} type="text" name="" required="required"/>
-                        <span>Title</span>
                     </div>
                     <div className={styles.inputBox}>
                         <input onChange={(e)=>handle(e)} id="date" value={data.date} type="date" name="" required="required"/>
                     </div>
                     <div className={styles.inputBox}>
-                        <input onClick={handlePost} type="submit" name="" value="Create"/>
+                        <input type="submit" value="Add"/>
                     </div>
                 </form>
             </div>
         </div>
     )
 }
-
-export default Modal

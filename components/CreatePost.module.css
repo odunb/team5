@@ -1,0 +1,74 @@
+.titleSpan {
+    color: #806BE4;
+}
+
+
+.button {
+    margin:auto;
+    background-color: #806BE4;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+
+.contactForm {
+    margin: auto;
+    width: 40%;
+    padding: 5px 20px 5px 20px;
+}
+
+
+
+.contactForm h1 {
+    font-size: 3em;
+}
+
+.textSpan {
+    color: #806BE4;
+}
+
+.contactForm .inputBox {
+    position: relative;
+    width: 100%;
+    margin-top: 15px;
+}
+
+.contactForm .inputBox input, .contactForm .inputBox textarea {
+    width: 100%;
+    padding: 12px 20px;
+    font-size: 16px;
+    margin: 16px 0;
+    outline: none;
+    resize: none;
+
+}
+
+.contactForm .inputBox span {
+    position: absolute;
+    left: 3px;
+}
+
+
+
+.contactForm .inputBox input[type="submit"] {
+    width: 100px;
+    background: #806BE4;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    font-size: 18px;
+    border-radius: 5px;
+}
+
+.contactForm .inputBox input[type="text"] {
+
+}
+
+.dataContainer {
+    margin-top: 2em;
+}
