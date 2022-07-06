@@ -62,7 +62,6 @@ function DataFetching() {
                             </div>
                             <div className={styles.buttons}>
                                 <button onClick={() => deletePost(post.id)} className={styles.deleteBtn}><MdDelete className={styles.delete}/></button>
-                                <input  onClick={() => donePost(post.title,post.title)} className={styles.checkbox} type="checkbox" id={post.title} name="checkbox"/>
                             </div>
                         </div>
                     )

@@ -1,12 +1,9 @@
-import styles from "./index.module.css"
-import DataFetching from "../components/DataFetching";
-import {useRouter} from "next/router";
+import React from "react";
+import styles from "./Modal.module.css"
 import {useState} from "react";
-import Modal from "../components/Modal";
 
 
-export default function Home() {
-    const [openModal, setOpenModal] = useState(false);
+function Modal({ closeModal }) {
 
     const [data, setData] = useState({
         title: "",
@@ -36,26 +33,26 @@ export default function Home() {
         console.log(resp)
     }
 
-    return (
-        <div className={styles.container}>
-            <div className={styles.contactForm}>
+    return(
+        <div className={styles.modalBackground}>
+            <div className={styles.modalContainer}>
+                <button onClick={() => closeModal(false)}>X</button>
                 <form>
-                    <h1>Add new <span className={styles.textSpan}>task</span></h1>
+                    <h1>Create youre <span className={styles.textSpan}>todo</span></h1>
                     <div className={styles.inputBox}>
-                        <label>Title</label>
                         <input onChange={(e)=>handle(e)} id="title" value={data.title} type="text" name="" required="required"/>
+                        <span>Title</span>
                     </div>
                     <div className={styles.inputBox}>
                         <input onChange={(e)=>handle(e)} id="date" value={data.date} type="date" name="" required="required"/>
                     </div>
                     <div className={styles.inputBox}>
-                        <input onClick={handlePost} type="submit" name="" value="Add"/>
+                        <input onClick={handlePost} type="submit" name="" value="Create"/>
                     </div>
                 </form>
-            </div>
-            <div className={styles.dataContainer}>
-                <DataFetching/>
             </div>
         </div>
     )
 }
+
+export default Modal

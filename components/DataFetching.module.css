@@ -10,7 +10,7 @@
     width: 70%;
     height: 6em;
     margin: 0.5em auto;
-    box-shadow: 1px 2px 3px 4px rgba(20,20,20,0.4);
+    box-shadow: rgba(0,0,0,0.35) 0px 5px 15px;
     border-left: 3px solid #806BE4;
 }
 
