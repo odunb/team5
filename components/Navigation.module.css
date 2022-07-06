@@ -6,19 +6,25 @@
 
 }
 
-
 .navbar {
     display: flex;
     flex-direction: row;
     column-gap: 3em;
     justify-content: left;
-    margin-left: 7em;
+    margin-left: 3em;
+    overflow: hidden;
 }
 
 .navbar a {
     font-weight: bolder;
     font-size: 1.2em;
+    border-bottom: 3px solid transparent;
 }
+
+.navbar a:active {
+    border-bottom: 3px solid #806BE4;
+}
+
 
 .title {
     color: #806BE4;

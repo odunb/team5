@@ -1,13 +1,18 @@
 import styles from "./aboutUs.module.css"
-import img from "../public/aboutPic.jpg"
+
 
 export default function AboutUs() {
 
-    console.log(img)
-    return(
+    return (
         <div>
             <h1 className={styles.title}>Learn more <span className={styles.titleSpan}>about us</span></h1>
-            <img src={img}/>
+            <div className={styles.text}>
+                <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
+                    labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores
+                    et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
+                    labore et dolore magna aliquyam erat, sed diam voluptua. </p>
+            </div>
         </div>
     )
 }
