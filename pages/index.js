@@ -39,7 +39,7 @@ export default function Home() {
     return (
         <div className={styles.container}>
             <div className={styles.contactForm}>
-                <form>
+                <form onSubmit={handlePost}>
                     <h1>Add new <span className={styles.textSpan}>task</span></h1>
                     <div className={styles.inputBox}>
                         <label>Title</label>
@@ -49,7 +49,7 @@ export default function Home() {
                         <input onChange={(e)=>handle(e)} id="date" value={data.date} type="date" name="" required="required"/>
                     </div>
                     <div className={styles.inputBox}>
-                        <input onClick={handlePost} type="submit" name="" value="Add"/>
+                        <input type="submit"/>
                     </div>
                 </form>
             </div>

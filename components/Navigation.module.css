@@ -4,6 +4,7 @@
     align-items: center;
     padding-left: 3em;
     margin-bottom: 3em;
+    background-color: #806BE4;
 }
 
 .navbar {
@@ -16,7 +17,8 @@
 }
 
 .navbar a {
-    font-weight: bolder;
+    color: white;
+    font-weight: normal;
     font-size: 1.2em;
     border-bottom: 3px solid transparent;
 }
@@ -27,7 +29,7 @@
 
 
 .title {
-    color: #806BE4;
+    color: white;
     font-size: 3em;
 }
 
