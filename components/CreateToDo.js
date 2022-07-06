@@ -5,7 +5,6 @@ import {useRouter} from "next/router";
 
 
 export default function CreateToDo(){
-    const router = useRouter()
     const [data, setData] = useState({
         title: "",
         date: "",
